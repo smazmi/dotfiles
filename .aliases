@@ -1,0 +1,35 @@
+# ---- System ----
+alias shutdown="sudo shutdown now"
+alias reboot="sudo reboot now"
+
+# ---- Docker ----
+alias docker="sudo docker"
+alias docker-compose="sudo docker-compose"
+
+# ---- Update ----
+alias un='$aurhelper -Rns' # uninstall package
+alias up='$aurhelper -Syu' # update system/package/aur
+alias pl='$aurhelper -Qs' # list installed package
+alias pa='$aurhelper -Ss' # list availabe package
+alias pc='$aurhelper -Sc' # remove unused cache
+alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
+
+
+# ---- Misc ----
+alias cls="clear"
+alias zshreload="source ~/.zshrc"
+alias zshconf="vim ~/.zshrc"
+alias aliases="vim ~/.aliases"
+alias cat="bat"
+alias cd="z"
+alias  l='eza -lh  --icons=auto' # long list
+alias ls='eza -1   --icons=auto' # short list
+alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+alias ld='eza -lhD --icons=auto' # long list dirs
+alias grep="rg" # RIP grep
+
+# ---- Apps ----
+alias vc='code --disable-gpu' # gui code editor
+alias vim="lvim"
+alias vi="lvim"
+alias open="dolphin ./"
