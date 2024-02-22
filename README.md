@@ -1,12 +1,13 @@
-# Dotfiles Repository
+# 🏡 Dotfiles Repository
+<p align="center">
+<img src="./logo.png" alt="Cute Logo" width="300">
+</p>
 
-![Cute Logo](./logo.png)
-
-## Overview
+## 🌟 Overview
 
 Welcome to my dotfiles repository! Here you'll find my personal configuration files for various tools and applications. I use GNU Stow to manage these dotfiles, making it simple to deploy and organize my setup on different systems.
 
-## Table of Contents
+## 📋 Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -14,7 +15,7 @@ Welcome to my dotfiles repository! Here you'll find my personal configuration fi
 - [Customization](#customization)
 - [Contributing](#contributing)
 
-## Installation
+## ⚙️ Installation
 
 To set up these dotfiles on your system, follow these steps:
 
@@ -54,7 +55,7 @@ To set up these dotfiles on your system, follow these steps:
 
     Repeat this step for other configurations you want to use.
 
-## Usage
+## 🚀 Usage
 
 This dotfiles repository is organized by tool or application. Use Stow to apply the configuration for a particular tool. For example:
 
@@ -67,7 +68,7 @@ stow neofetch
 
 Feel free to mix and match configurations based on your preferences.
 
-## Structure
+## 📁 Structure
 
 The repository structure is organized as follows:
 
@@ -89,10 +90,10 @@ The repository structure is organized as follows:
 
 Each subdirectory under `.config` corresponds to a specific tool or application with its respective configuration files.
 
-## Customization
+## 🛠️ Customization
 
 Feel free to customize these dotfiles to suit your preferences. Modify the configuration files or add your own. To keep things organized, consider creating a separate folder for your custom configurations.
 
-## Contributing
+## 🤝 Contributing
 
 If you have improvements or additional configurations to share, open an issue or submit a pull request. Contributions are welcome!

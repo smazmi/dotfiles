@@ -40,7 +40,16 @@ lvim.plugins = {
 
   {
     "npxbr/glow.nvim",
-    ft = { "markdown" }
+    ft = { "markdown" } -- Markdown Highlights
+  },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    build = "cd app && npm install",
+    ft = "markdown",
+    config = function() -- Markdown Preview
+      vim.g.mkdp_auto_start = 1
+    end,
   },
 
   { 'lunarvim/lunar.nvim' },
