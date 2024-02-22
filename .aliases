@@ -20,6 +20,7 @@ alias cls="clear"
 alias zshreload="source ~/.zshrc"
 alias zshconf="vim ~/.zshrc"
 alias aliases="vim ~/.aliases"
+alias tmuxreload="tmux source ~/.config/tmux/tmux.conf"
 alias cat="bat"
 alias cd="z"
 alias  l='eza -lh  --icons=auto' # long list
