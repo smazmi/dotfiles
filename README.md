@@ -75,6 +75,7 @@ The repository structure is organized as follows:
 │       # ... (Neofetch configurations)
 ├── README.md
 ├── .stow-local-ignore 
+├── .profile 
 └── .zshrc
 ```
 
