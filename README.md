@@ -7,14 +7,6 @@
 
 Welcome to my dotfiles repository! Here you'll find my personal configuration files for various tools and applications. I use GNU Stow to manage these dotfiles, making it simple to deploy and organize my setup on different systems.
 
-## 📋 Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Structure](#structure)
-- [Customization](#customization)
-- [Contributing](#contributing)
-
 ## ⚙️ Installation
 
 To set up these dotfiles on your system, follow these steps:
@@ -46,14 +38,6 @@ To set up these dotfiles on your system, follow these steps:
     ```bash
     cd ~/.dotfiles
     ```
-
-4. Use Stow to symlink specific configurations. For example, to symlink the Zsh configuration:
-
-    ```bash
-    stow .zshrc
-    ```
-
-    Repeat this step for other configurations you want to use.
 
 ## 🚀 Usage
 
