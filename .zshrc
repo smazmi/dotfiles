@@ -77,6 +77,9 @@ function in {
 # ---- Helpful aliases ----
 source $HOME/.aliases
 
+# ---- Helpful Key-bindings ----
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
 
 # ---- To customize prompt, run `p10k configure` or edit ~/.p10k.zsh. ----
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
