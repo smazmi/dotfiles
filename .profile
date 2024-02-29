@@ -1,11 +1,11 @@
 # vim:foldmethod=marker
 
-export EDITOR="nvim"
+export EDITOR="lvim"
 export SHELL="zsh"
 export PATH="$PATH:$HOME/.local/bin"
 
 # -------- Functions --------{{{
-# ---- C compile ----{{{
+# ---- C compile ----
 function compilec {
     local filename="${1%.*}"
     local output_folder="output"
@@ -15,9 +15,9 @@ function compilec {
     fi
 
     gcc -w "$1" -o "$output_folder/$filename" && "$output_folder/$filename"
-}# }}}
+}
 
-# ---- C++ compile ----{{{
+# ---- C++ compile ----
 function compilecpp {
     local filename="${1%.*}"
     local output_folder="output"
@@ -27,9 +27,10 @@ function compilecpp {
     fi
 
     g++ -w "$1" -o "$output_folder/$filename" && "$output_folder/$filename"
-}# }}}
+}
 
-# ---- Java compile ----{{{
+
+# ---- Java compile ----
 function javacom {
     local filename="${1%.*}"
     local output_folder="output"
@@ -45,9 +46,9 @@ function javacom {
     else
         echo "Compilation failed. Please check your code."
     fi
-}}}}
+}
 
-# ---- Docker ----{{{
+# ---- Docker ----
 dockersrm() {
   local container_id="$1"
 
@@ -57,4 +58,4 @@ dockersrm() {
   fi
 
   docker stop "$container_id" && docker rm "$container_id"
-}# }}}}}}
+}}}}
