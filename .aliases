@@ -7,6 +7,7 @@ alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
 
 # ---- Update ----
+alias ins='$aurhelper -S' # install package
 alias un='$aurhelper -Rns' # uninstall package
 alias up='$aurhelper -Syu' # update system/package/aur
 alias pl='$aurhelper -Qs' # list installed package
