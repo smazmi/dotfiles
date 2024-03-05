@@ -53,7 +53,7 @@ dockersrm() {
   local container_id="$1"
 
   if [ -z "$container_id" ]; then
-    echo "Usage: docker_stop_and_rm <container_id>"
+    echo "Usage: dockersrm <container_id>"
     return 1
   fi
 

@@ -144,7 +144,6 @@ table.insert(lvim.plugins, {
     if ok then cmp.setup({}) end
   end,
 })
-lvim.builtin.treesitter.rainbow.enable = true
 lvim.builtin.telescope.on_config_done = function(telescope)
   pcall(telescope.load_extension, "frecency")
 end
