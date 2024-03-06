@@ -1,12 +1,16 @@
-# ---- System ----
+# vim:foldmethod=marker
+
+# ---- System ----{{{
 alias shutdown="sudo shutdown now"
 alias reboot="sudo reboot now"
+#}}}
 
-# ---- Docker ----
+# ---- Docker ----{{{
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
+#}}}
 
-# ---- Update ----
+# ---- Update ----{{{
 alias ins='$aurhelper -S' # install package
 alias un='$aurhelper -Rns' # uninstall package
 alias up='$aurhelper -Syu' # update system/package/aur
@@ -15,24 +19,37 @@ alias pa='$aurhelper -Ss' # list availabe package
 alias pc='$aurhelper -Sc' # remove unused cache
 alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 alias version='$aurhelper -Qi' # check version
+alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+#}}}
 
+# ---- Mirrors ----{{{
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" 
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+#}}}
 
-# ---- Misc ----
-alias cls="clear"
-alias zshreload="source ~/.zshrc"
-alias zshconf="vim ~/.zshrc"
-alias aliases="vim ~/.aliases"
-alias tmuxreload="tmux source ~/.config/tmux/tmux.conf"
-alias cat="bat"
-alias cd="z"
+# ---- Misc ----{{{
+alias cls="clear" # clear screen
+alias zshreload="source ~/.zshrc" # reload zsh
+alias zshconf="vim ~/.zshrc" # edit zshrc
+alias aliases="vim ~/.aliases" # edit aliases
+alias tmuxreload="tmux source ~/.config/tmux/tmux.conf" # reload tmux config
+alias cat="bat" # RIP cat
+alias cd="z" # z is a better cd
 alias  l='eza -lh  --icons=auto' # long list
 alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 alias grep="rg" # RIP grep
+alias df='df -h' # human readable sizes
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'" # change to bash
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'" # change to zsh
+#}}}
 
-# ---- Apps ----
+# ---- Apps ----{{{
 alias vc='code --disable-gpu' # gui code editor
-alias vim="lvim"
-alias vi="lvim"
-alias open="dolphin ./"
+alias vim="lvim" # lunar vim
+alias vi="lvim" # lunar vim
+alias open="dolphin ./" # open file manager
+#}}}
