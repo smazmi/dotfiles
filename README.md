@@ -63,7 +63,7 @@ The repository structure is organized as follows:
 ├── 🖼 logo.png
 ├── 📂 lvim
 ├── 📂 neofetch
-├── README.md
+├── 📄 README.md
 ├── 📂 tmux
 ├── 📂 zsh
 ├── 📄 .gitignore
