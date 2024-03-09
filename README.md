@@ -49,7 +49,7 @@ stow lvim
 stow neofetch
 # ... and so on
 ```
-or `stow .` can be used to symlink all the configurations at once.
+or `stow */` can be used to symlink all the configurations at once.
 
 Feel free to mix and match configurations based on your preferences.
 
@@ -59,27 +59,18 @@ The repository structure is organized as follows:
 
 ```
 .
-├── .aliases
-├── .config
-│   ├── kitty
-│   │   ├── kitty.conf
-│   │   └── themes
-│   │       # ... (various theme configurations)
-│   ├── lvim
-│   │   # ... (LVIM configurations)
-│   ├── tmux
-│   │   ├── tmux.conf
-│   │   └── plugins
-│   │       # ... (various tmux plugins)
-│   └── neofetch
-│       # ... (Neofetch configurations)
+├── kitty
+├── logo.png
+├── lvim
+├── neofetch
 ├── README.md
-├── .stow-local-ignore 
-├── .profile 
-└── .zshrc
+├── tmux
+├── zsh
+├── .gitignore
+└── .stow-local-ignore
 ```
 
-Each subdirectory under `.config` corresponds to a specific tool or application with its respective configuration files.
+Each directory corresponds to a specific tool or application with its respective configuration files.
 
 ## 🚫 Local Stow Ignore
 
