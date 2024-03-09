@@ -31,9 +31,9 @@ alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pac
 
 # ---- Misc ----{{{
 alias cls="clear" # clear screen
-alias zshreload="source ~/.zshrc" # reload zsh
-alias zshconf="vim ~/.zshrc" # edit zshrc
-alias aliases="vim ~/.aliases" # edit aliases
+alias zshreload="source "$HOME"/.config/zsh" # reload zsh
+alias zshconf="vim "$HOME"/.config/zsh/.zshrc" # edit zshrc
+alias aliases="vim "$HOME"/.config/zsh/.aliases" # edit aliases
 alias tmuxreload="tmux source ~/.config/tmux/tmux.conf" # reload tmux config
 alias cat="bat" # RIP cat
 alias cd="z" # z is a better cd

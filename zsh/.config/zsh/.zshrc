@@ -1,5 +1,4 @@
 # vim:foldmethod=marker
-
 # ---- Path to your oh-my-zsh installation ----
 ZSH=/usr/share/oh-my-zsh/
 
@@ -7,7 +6,7 @@ ZSH=/usr/share/oh-my-zsh/
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # ---- Path to your .profile file ----
-source $HOME/.profile
+source $HOME/.config/zsh/.profile
 
 # ---- Plugins ----{{{
 plugins=(
@@ -75,15 +74,14 @@ function in {
 
 
 # ---- Helpful aliases ----
-source $HOME/.aliases
+source $ZDOTDIR/.aliases
 
 # ---- Helpful Key-bindings ----
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 
 # ---- To customize prompt, run `p10k configure` or edit ~/.p10k.zsh. ----
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+[[ ! -f ${ZDOTDIR:-~}/.p10k.zsh ]] || source ${ZDOTDIR:-~}/.p10k.zsh
 
 # ---- Display Pokemon ----
 pokemon-colorscripts --no-title -r 1,3,6

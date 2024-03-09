@@ -72,12 +72,12 @@ lvim.plugins = {
     build = "npm install --prefix server",
   },
 
-  {
-    'barrett-ruth/live-server.nvim',
-    build = 'pnpm add -g live-server',
-    cmd = { 'LiveServerStart', 'LiveServerStop' }, -- Triditional Live Server.
-    config = true
-  },
+  -- {
+  --   'barrett-ruth/live-server.nvim',
+  --   build = 'pnpm add -g live-server',
+  --   cmd = { 'LiveServerStart', 'LiveServerStop' }, -- Triditional Live Server.
+  --   config = true
+  -- },
 
   {
     "folke/todo-comments.nvim",
