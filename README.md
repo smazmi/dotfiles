@@ -59,15 +59,15 @@ The repository structure is organized as follows:
 
 ```
 .
-├── kitty
-├── logo.png
-├── lvim
-├── neofetch
+├── 📂 kitty
+├── 🖼 logo.png
+├── 📂 lvim
+├── 📂 neofetch
 ├── README.md
-├── tmux
-├── zsh
-├── .gitignore
-└── .stow-local-ignore
+├── 📂 tmux
+├── 📂 zsh
+├── 📄 .gitignore
+└── 📄 .stow-local-ignore
 ```
 
 Each directory corresponds to a specific tool or application with its respective configuration files.
