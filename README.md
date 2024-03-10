@@ -65,6 +65,7 @@ The repository structure is organized as follows:
 ├── 📂 neofetch
 ├── 📄 README.md
 ├── 📂 tmux
+├── 📂 yazi
 ├── 📂 zsh
 ├── 📄 .gitignore
 └── 📄 .stow-local-ignore
