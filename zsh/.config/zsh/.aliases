@@ -31,7 +31,7 @@ alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pac
 
 # ---- Misc ----{{{
 alias cls="clear" # clear screen
-alias zshreload="source "$HOME"/.config/zsh" # reload zsh
+alias zshreload="source "$HOME"/.config/zsh/.zshrc" # reload zsh
 alias zshconf="vim "$HOME"/.config/zsh/.zshrc" # edit zshrc
 alias aliases="vim "$HOME"/.config/zsh/.aliases" # edit aliases
 alias tmuxreload="tmux source ~/.config/tmux/tmux.conf" # reload tmux config
@@ -42,6 +42,7 @@ alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 alias grep="rg" # RIP grep
+alias find="fd" # RIP find
 alias df='df -h' # human readable sizes
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'" # change to bash
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'" # change to zsh
