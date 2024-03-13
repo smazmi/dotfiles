@@ -46,6 +46,7 @@ alias find="fd" # RIP find
 alias df='df -h' # human readable sizes
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'" # change to bash
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'" # change to zsh
+alias lg="lazygit" # lazygit
 #}}}
 
 # ---- Apps ----{{{
@@ -53,4 +54,5 @@ alias vc='code --disable-gpu' # gui code editor
 alias vim="lvim" # lunar vim
 alias vi="lvim" # lunar vim
 alias open="dolphin ./" # open file manager
+alias tb="nc termbin.com 9999" # pastebin
 #}}}

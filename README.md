@@ -60,13 +60,13 @@ The repository structure is organized as follows:
 ```
 .
 ├── 📂 kitty
-├── 🖼 logo.png
 ├── 📂 lvim
 ├── 📂 neofetch
-├── 📄 README.md
 ├── 📂 tmux
 ├── 📂 yazi
 ├── 📂 zsh
+├── 🖼 logo.png
+├── 📄 README.md
 ├── 📄 .gitignore
 └── 📄 .stow-local-ignore
 ```
