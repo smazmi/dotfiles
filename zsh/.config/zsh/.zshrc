@@ -19,6 +19,7 @@ copybuffer
 copypath
 dirhistory
 web-search
+zsh-autopair
 )# }}}
 
 
