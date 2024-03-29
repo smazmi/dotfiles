@@ -55,4 +55,5 @@ alias vim="lvim" # lunar vim
 alias vi="lvim" # lunar vim
 alias open="dolphin ./" # open file manager
 alias tb="nc termbin.com 9999" # pastebin
+alias lf="yazi" #yazi file manager
 #}}}
