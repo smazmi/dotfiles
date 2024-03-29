@@ -10,7 +10,6 @@ lvim.plugins = {
       })
     end,
   },
-
   {
     "nvim-pack/nvim-spectre",
     event = "BufRead",

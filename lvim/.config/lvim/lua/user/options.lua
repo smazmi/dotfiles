@@ -36,7 +36,7 @@ lvim.builtin.treesitter.rainbow.enable = true
 lvim.builtin.treesitter.ignore_install = {}
 lvim.builtin.treesitter.highlight.enabled = true
 
--- lvim.builtin.project.detection_methods = { "lsp", "pattern" }   -- Self implementation of dir detection.
+lvim.builtin.project.detection_methods = { "lsp", "pattern" } -- Self implementation of dir detection.
 lvim.builtin.project.patterns = {
   ".git",
   "package-lock.json",
