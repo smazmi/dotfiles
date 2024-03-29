@@ -10,7 +10,10 @@ export HISTFILE="$XDG_CONFIG_HOME"/zsh/.zsh_history
 export NVM_DIR="$HOME/.local/share/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+
+[ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 
 export EDITOR="lvim"           # $EDITOR use lvim
 export VISUAL="code"           # $VISUAL use code
@@ -63,6 +66,19 @@ function javacom {
     else
         echo "Compilation failed. Please check your code."
     fi
+}
+#}}}
+
+# ---- Rust compile ----{{{
+rustcomp() {
+    local filename="${1%.*}"
+    local output_folder="output"
+
+    if [ ! -d "$output_folder" ]; then
+        mkdir "$output_folder"
+    fi
+
+    rustc "$1" -o "$output_folder/$filename" && "$output_folder/$filename"
 }
 #}}}
 
