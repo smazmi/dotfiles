@@ -15,6 +15,7 @@ export NVM_DIR="$HOME/.local/share/nvm"
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 
+export SUDO_EDITOR="nvim"      # SUDO_EDITOR use nvim
 export EDITOR="lvim"           # $EDITOR use lvim
 export VISUAL="code"           # $VISUAL use code
 export SHELL="zsh"             # $SHELL use zsh
