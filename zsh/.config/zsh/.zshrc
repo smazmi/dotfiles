@@ -26,17 +26,15 @@ zsh-autopair
 # ---- Oh-my-zsh ----
 source $ZSH/oh-my-zsh.sh
 
-# ---- fzf key bindings ----
+# ---- fzf ----
 source /usr/share/fzf/key-bindings.zsh 
-
-# ---- fzf completion ----
 source /usr/share/fzf/completion.zsh 
 
 # ---- zoxide ----
 eval "$(zoxide init zsh)"
 
 
-# ---- In case a command is not found, try to find the package that has it ----
+# ---- Command not found handler ----{{{
 function command_not_found_handler {
     local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
     printf 'zsh: command not found: %s\n' "$1"
@@ -55,15 +53,17 @@ function command_not_found_handler {
     fi
     return 127
 }
+#}}}
 
-
-# ---- Detect the AUR wrapper ----
+# ---- AUR wrapper detection ----{{{
 if pacman -Qi yay &>/dev/null ; then
    aurhelper="yay"
 elif pacman -Qi paru &>/dev/null ; then
    aurhelper="paru"
 fi
+#}}}
 
+# ---- Function to install packages ----{{{
 function in {
     local pkg="$1"
     if pacman -Si "$pkg" &>/dev/null ; then
@@ -72,6 +72,7 @@ function in {
         "$aurhelper" -S "$pkg"
     fi
 }
+#}}}
 
 
 # ---- Helpful aliases ----
