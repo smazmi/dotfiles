@@ -27,3 +27,15 @@ lvim.lsp.buffer_mappings.normal_mode["gf"] = {
   ":Telescope frecency<cr>",
   kind.cmp_kind.Reference .. " Telescope Frecency"
 }
+
+-- lvim.builtin.which_key.mappings["C"] = {
+--   name = "Python",
+--   c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" }, -- Choose Python Environment
+-- }
+
+-- Dismiss Noice Message
+-- vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss", { desc = "Dismiss Noice Message" })
+lvim.builtin.which_key.mappings["n"] = {
+  name = "Noice",
+  d = { "<cmd>NoiceDismiss<cr>", "NoiceDismiss" },
+}
