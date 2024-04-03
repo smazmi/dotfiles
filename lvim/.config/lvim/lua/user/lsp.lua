@@ -43,15 +43,15 @@ formatters.setup({
   {
     command = "prettierd",
     filetypes = {
-      -- "javascript",
+      "javascript",
       "javascriptreact",
       "typescript",
       "typescriptreact",
       "vue",
-      -- "css",
+      "css",
       "scss",
       "less",
-      -- "html",
+      "html",
       "yaml",
       "markdown",
       "markdown.mdx",
@@ -60,6 +60,10 @@ formatters.setup({
       "json",
     }
   },
+  {
+    command = "black",
+    filetypes = { "python" }
+  }
 })
 
 local linters = require "lvim.lsp.null-ls.linters"
@@ -67,7 +71,7 @@ linters.setup({
   {
     command = "eslint_d",
     filetypes = {
-      -- "javascript",
+      "javascript",
       "typescript",
       "typescriptreact",
       "json"
