@@ -57,4 +57,6 @@ alias vi="lvim" # lunar vim
 alias open="dolphin ./" # open file manager
 alias tb="nc termbin.com 9999" # pastebin
 alias lf="yazi" #yazi file manager
+alias wgup="sudo wg-quick up" # start wireguard
+alias wgdown="sudo wg-quick down" # stop wireguard
 #}}}
