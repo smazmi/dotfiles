@@ -63,6 +63,10 @@ formatters.setup({
   {
     command = "black",
     filetypes = { "python" }
+  },
+  {
+    command = "shfmt",
+    filetypes = { "sh" }
   }
 })
 
@@ -77,6 +81,10 @@ linters.setup({
       "json"
     }
   },
+  {
+    command = "shellcheck",
+    filetypes = { "sh" }
+  }
 })
 
 lvim.lsp.diagnostics.float.max_width = 120
