@@ -46,7 +46,7 @@ lvim.builtin.project.patterns = {
 }
 
 vim.opt.shell = "/bin/zsh"
-lvim.format_on_save = true
+lvim.format_on_save = false
 
 vim.o.linebreak = true
 vim.o.wrap = false
