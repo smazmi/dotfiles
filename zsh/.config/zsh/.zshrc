@@ -88,3 +88,4 @@ bindkey '^e' end-of-line
 # ---- Display Pokemon ----
 pokemon-colorscripts --no-title -r 1,3,6
 
+source ~/.lpu_creds
