@@ -1,5 +1,4 @@
 source ~/.config/zsh/.profile
-source ~/.config/zsh/.env
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export NVM_DIR="$XDG_DATA_HOME"/nvm
