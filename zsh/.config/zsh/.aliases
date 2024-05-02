@@ -48,6 +48,9 @@ alias df='df -h' # human readable sizes
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'" # change to bash
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'" # change to zsh
 alias lg="lazygit" # lazygit
+alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"" # wget
+alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings" # nvidia settings
+alias adb='HOME="$XDG_DATA_HOME"/android adb' # adb
 #}}}
 
 # ---- Apps ----{{{
