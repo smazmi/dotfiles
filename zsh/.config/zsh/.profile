@@ -8,14 +8,17 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 
 export ZDOTDIR="$HOME"/.config/zsh
-export HISTFILE="$XDG_CONFIG_HOME"/zsh/.zsh_history
 export NVM_DIR="$HOME/.local/share/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --color=always $realpath'
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
+autoload -U compinit && compinit
+fpath+=${ZSH_CUSTOM:-${ZSH:-/usr/share/oh-my-zsh}}/plugins/zsh-completions/src
 
 export SUDO_EDITOR="nvim"      # SUDO_EDITOR use nvim
 export EDITOR="lvim"           # $EDITOR use lvim
@@ -24,6 +27,16 @@ export SHELL="zsh"             # $SHELL use zsh
 export PATH="$PATH:$HOME/.local/bin" # Add local bin to path
 export MANPAGER='lvim +Man!'   # Use lvim as manpager
 export TERMINAL="kitty"        # Use kitty as terminal
+
+# ---- History ----
+export HISTFILE="$XDG_CONFIG_HOME"/zsh/.zsh_history
+export HISTDUP=erase
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
 
 # -------- Functions --------{{{
 
