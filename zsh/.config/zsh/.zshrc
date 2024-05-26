@@ -20,6 +20,7 @@ copypath
 dirhistory
 web-search
 zsh-autopair
+fzf-tab
 )# }}}
 
 
@@ -81,6 +82,8 @@ source $ZDOTDIR/.aliases
 # ---- Helpful Key-bindings ----
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
 
 # ---- To customize prompt, run `p10k configure` or edit ~/.p10k.zsh. ----
 [[ ! -f ${ZDOTDIR:-~}/.p10k.zsh ]] || source ${ZDOTDIR:-~}/.p10k.zsh
