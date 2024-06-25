@@ -60,6 +60,8 @@ The repository structure is organized as follows:
 ```
 .
 ├── 📂 kitty
+├── 📂 fastfetch
+├── 📂 nvim
 ├── 📂 lvim
 ├── 📂 neofetch
 ├── 📂 tmux
