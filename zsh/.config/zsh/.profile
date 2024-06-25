@@ -25,12 +25,12 @@ export EDITOR="lvim"           # $EDITOR use lvim
 export VISUAL="code"           # $VISUAL use code
 export SHELL="zsh"             # $SHELL use zsh
 export PATH="$PATH:$HOME/.local/bin" # Add local bin to path
-export MANPAGER='lvim +Man!'   # Use lvim as manpager
+export MANPAGER='nvim +Man!'   # Use lvim as manpager
 export TERMINAL="kitty"        # Use kitty as terminal
 
 # ---- History ----
 export HISTFILE="$XDG_CONFIG_HOME"/zsh/.zsh_history
-export HISTDUP=erase
+export HISTSIZE=1000000
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups

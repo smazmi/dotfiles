@@ -21,6 +21,7 @@ dirhistory
 web-search
 zsh-autopair
 fzf-tab
+fzf-docker
 )# }}}
 
 

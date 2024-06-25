@@ -10,5 +10,8 @@ export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 export GOPATH="$XDG_DATA_HOME"/go
 export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export PYTHONSTARTUP="$HOME"/python/pythonrc
+export _ZL_DATA="$XDG_DATA_HOME/zlua"
 
 . "/home/arno/.local/share/cargo/env"

@@ -55,8 +55,8 @@ alias adb='HOME="$XDG_DATA_HOME"/android adb' # adb
 
 # ---- Apps ----{{{
 alias vc='code --disable-gpu' # gui code editor
-alias vim="lvim" # lunar vim
-alias vi="lvim" # lunar vim
+alias vim="nvim" # neovim
+alias vi="nvim" # neovim
 alias open="dolphin ./" # open file manager
 alias tb="nc termbin.com 9999" # pastebin
 alias lf="yazi" #yazi file manager
