@@ -14,13 +14,13 @@ export NVM_DIR="$HOME/.local/share/nvm"
 
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf --preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf --preview 'eza -1 --color=always $realpath'
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 autoload -U compinit && compinit
 fpath+=${ZSH_CUSTOM:-${ZSH:-/usr/share/oh-my-zsh}}/plugins/zsh-completions/src
 
-# ---- fzf and fd setup for git ----
+# ---- fzf and fd setup for git ----{{{
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -35,6 +35,7 @@ _fzf_compgen_dir() {
 }
 
 source ~/.config/zsh/plugins/fzf-git.sh/fzf-git.sh
+#}}}
 
 export SUDO_EDITOR="nvim"            # SUDO_EDITOR use nvim
 export EDITOR="nvim"                 # $EDITOR use nvim
@@ -52,6 +53,26 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+
+# ---- eza configuration ----{{{
+
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo ${}'"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
+#}}}
 
 # -------- Functions --------{{{
 
