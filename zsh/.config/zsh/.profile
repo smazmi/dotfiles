@@ -20,6 +20,22 @@ compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 autoload -U compinit && compinit
 fpath+=${ZSH_CUSTOM:-${ZSH:-/usr/share/oh-my-zsh}}/plugins/zsh-completions/src
 
+# ---- fzf and fd setup for git ----
+
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+_fzf_compgen_path() {
+	fd --hidden --exclude .git . "$1"
+}
+
+_fzf_compgen_dir() {
+	fd --type=d --hidden --exclude .git . "$1"
+}
+
+source ~/.config/zsh/plugins/fzf-git.sh/fzf-git.sh
+
 export SUDO_EDITOR="nvim"            # SUDO_EDITOR use nvim
 export EDITOR="nvim"                 # $EDITOR use nvim
 export VISUAL="code"                 # $VISUAL use code
