@@ -121,45 +121,38 @@ function javacom {
 }
 #}}}
 
-# ---- Rust compile ----{{{
-rustcomp() {
-	local filename="${1%.*}"
-	local output_folder="output"
-
-	if [ ! -d "$output_folder" ]; then
-		mkdir "$output_folder"
-	fi
-
-	rustc "$1" -o "$output_folder/$filename" && "$output_folder/$filename"
-}
-#}}}
-
 # ---- Extract ----{{{
 function extract {
 	if [ -z "$1" ]; then
-		# display usage if no parameters given
+		# display usage if no parameters are given
 		echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
 		echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
 	else
 		for n in "$@"; do
 			if [ -f "$n" ]; then
+				# Get the base name without extension for the folder
+				base_name=$(basename "$n" | sed 's/\(.*\)\..*/\1/')
+				# Create a directory based on the file name
+				mkdir -p "$base_name"
+				
+				# Extract into the directory
 				case "${n%,}" in
 				*.cbt | *.tar.bz2 | *.tar.gz | *.tar.xz | *.tbz2 | *.tgz | *.txz | *.tar)
-					tar xvf "$n"
+					tar xvf "$n" -C "$base_name"
 					;;
-				*.lzma) unlzma ./"$n" ;;
-				*.bz2) bunzip2 ./"$n" ;;
-				*.cbr | *.rar) unrar x -ad ./"$n" ;;
-				*.gz) gunzip ./"$n" ;;
-				*.cbz | *.epub | *.zip) unzip ./"$n" ;;
-				*.z) uncompress ./"$n" ;;
+				*.lzma) unlzma ./"$n" -C "$base_name" ;;
+				*.bz2) bunzip2 ./"$n" -c > "$base_name/$(basename "$base_name")" ;;
+				*.cbr | *.rar) unrar x -ad ./"$n" "$base_name" ;;
+				*.gz) gunzip ./"$n" -c > "$base_name/$(basename "$base_name")" ;;
+				*.cbz | *.epub | *.zip) unzip ./"$n" -d "$base_name" ;;
+				*.z) uncompress ./"$n" -c > "$base_name/$(basename "$base_name")" ;;
 				*.7z | *.arj | *.cab | *.cb7 | *.chm | *.deb | *.dmg | *.iso | *.lzh | *.msi | *.pkg | *.rpm | *.udf | *.wim | *.xar)
-					7z x ./"$n"
+					7z x ./"$n" -o"$base_name"
 					;;
-				*.xz) unxz ./"$n" ;;
-				*.exe) cabextract ./"$n" ;;
-				*.cpio) cpio -id <./"$n" ;;
-				*.cba | *.ace) unace x ./"$n" ;;
+				*.xz) unxz ./"$n" -c > "$base_name/$(basename "$base_name")" ;;
+				*.exe) cabextract ./"$n" -d "$base_name" ;;
+				*.cpio) (cd "$base_name" && cpio -id <../"$n") ;;
+				*.cba | *.ace) unace x ./"$n" "$base_name" ;;
 				*)
 					echo "extract: '$n' - unknown archive method"
 					return 1

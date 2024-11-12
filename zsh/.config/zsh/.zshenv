@@ -18,5 +18,10 @@ export GPG_TTY=$(tty)
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials                      
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk/
+export ANDROID_HOME=$HOME/Android/Sdk/
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 . "/home/arno/.local/share/cargo/env"
