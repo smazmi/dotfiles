@@ -59,12 +59,14 @@ The repository structure is organized as follows:
 
 ```
 .
+├── 📂 bat 
 ├── 📂 kitty
 ├── 📂 fastfetch
 ├── 📂 nvim
 ├── 📂 lvim
 ├── 📂 neofetch
 ├── 📂 tmux
+├── 📂 xremap
 ├── 📂 yazi
 ├── 📂 zsh
 ├── 🖼 logo.png
