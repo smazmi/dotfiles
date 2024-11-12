@@ -17,4 +17,3 @@ end
 
 require "lazy_setup"
 require "polish"
-require("telescope").load_extension "noice"

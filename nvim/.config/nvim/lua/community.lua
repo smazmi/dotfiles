@@ -8,6 +8,13 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.media.image-nvim" },
+  { import = "astrocommunity.media.presence-nvim" },
+  { import = "astrocommunity.completion.cmp-cmdline" },
+  { import = "astrocommunity.completion.cmp-calc" },
+  { import = "astrocommunity.completion.cmp-tmux" },
+  { import = "astrocommunity.completion.cmp-git" },
+  { import = "astrocommunity.markdown-and-latex.vimtex" },
   -- import/override with your plugins folder
 }
