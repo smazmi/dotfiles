@@ -51,10 +51,10 @@ alias lg="lazygit" # lazygit
 alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"" # wget
 alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings" # nvidia settings
 alias adb='HOME="$XDG_DATA_HOME"/android adb' # adb
+alias s='sesh connect $(sesh list | fzf)' # sesh for tmux
 #}}}
 
 # ---- Apps ----{{{
-alias vc='code --disable-gpu' # gui code editor
 alias vim="nvim" # neovim
 alias vi="nvim" # neovim
 alias open="dolphin ./" # open file manager
