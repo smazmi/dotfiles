@@ -16,8 +16,8 @@ export NVM_DIR="$HOME/.local/share/nvm"
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
 zstyle ':fzf-tab:complete:cd:*' fzf --preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf --preview 'eza -1 --color=always $realpath'
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 autoload -U compinit && compinit
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 fpath+=${ZSH_CUSTOM:-${ZSH:-/usr/share/oh-my-zsh}}/plugins/zsh-completions/src
 
 # ---- fzf and fd setup for git ----{{{

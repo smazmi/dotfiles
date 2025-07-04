@@ -8,6 +8,10 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # ---- Path to your .profile file ----
 source $HOME/.config/zsh/.profile
 
+source ~/.config/zshrc.d/dots-hyprland.zsh
+
+set -o vi
+
 # ---- Plugins ----{{{
 plugins=(
   git 
@@ -36,26 +40,26 @@ source /usr/share/fzf/completion.zsh
 eval "$(zoxide init zsh)"
 
 
-# ---- Command not found handler ----{{{
-function command_not_found_handler {
-    local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
-    printf 'zsh: command not found: %s\n' "$1"
-    local entries=( ${(f)"$(/usr/bin/pacman -F --machinereadable -- "/usr/bin/$1")"} )
-    if (( ${#entries[@]} )) ; then
-        printf "${bright}$1${reset} may be found in the following packages:\n"
-        local pkg
-        for entry in "${entries[@]}" ; do
-            local fields=( ${(0)entry} )
-            if [[ "$pkg" != "${fields[2]}" ]] ; then
-                printf "${purple}%s/${bright}%s ${green}%s${reset}\n" "${fields[1]}" "${fields[2]}" "${fields[3]}"
-            fi
-            printf '    /%s\n' "${fields[4]}"
-            pkg="${fields[2]}"
-        done
-    fi
-    return 127
-}
-#}}}
+# # ---- Command not found handler ----{{{
+# function command_not_found_handler {
+#     local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
+#     printf 'zsh: command not found: %s\n' "$1"
+#     local entries=( ${(f)"$(/usr/bin/pacman -F --machinereadable -- "/usr/bin/$1")"} )
+#     if (( ${#entries[@]} )) ; then
+#         printf "${bright}$1${reset} may be found in the following packages:\n"
+#         local pkg
+#         for entry in "${entries[@]}" ; do
+#             local fields=( ${(0)entry} )
+#             if [[ "$pkg" != "${fields[2]}" ]] ; then
+#                 printf "${purple}%s/${bright}%s ${green}%s${reset}\n" "${fields[1]}" "${fields[2]}" "${fields[3]}"
+#             fi
+#             printf '    /%s\n' "${fields[4]}"
+#             pkg="${fields[2]}"
+#         done
+#     fi
+#     return 127
+# }
+# #}}}
 
 # ---- AUR wrapper detection ----{{{
 if pacman -Qi yay &>/dev/null ; then
@@ -90,5 +94,5 @@ bindkey '^n' history-search-forward
 [[ ! -f ${ZDOTDIR:-~}/.p10k.zsh ]] || source ${ZDOTDIR:-~}/.p10k.zsh
 
 # ---- Display Pokemon ----
-pokemon-colorscripts --no-title -r 1,3,6
-
+# pokemon-colorscripts --no-title -r 1,3,6
+krabby random --no-title 1,3,6

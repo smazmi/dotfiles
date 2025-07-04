@@ -1,0 +1,32 @@
+[[session]]
+name = "relayr"
+path = "~/projects/relayr"
+windows = ["code", "ingest", "cli", "consumer", "test", "shell", "notes", "git"]
+
+[[window]]
+name = "code"
+startup_script = "nvim"
+
+[[window]]
+name = "ingest"
+
+[[window]]
+name = "cli"
+
+[[window]]
+name = "consumer"
+
+[[window]]
+name = "test"
+
+[[window]]
+name = "shell"
+
+[[window]]
+name = "notes"
+path = "~/projects/chat"
+startup_script = "nvim new.md"
+
+[[window]]
+name = "git"
+startup_script = "lazygit"
