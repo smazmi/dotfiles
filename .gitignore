@@ -2,3 +2,4 @@
 .env
 .zcompdump*
 lazy-lock.json*
+history.txt
