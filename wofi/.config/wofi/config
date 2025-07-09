@@ -1,0 +1,11 @@
+width=30%
+height=400
+location=center
+columns=1
+show=drun
+prompt=Run:
+allow_markup=true
+insensitive=true
+term=kitty
+no_actions=true
+allow_images=true
