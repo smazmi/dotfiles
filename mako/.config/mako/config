@@ -1,0 +1,38 @@
+# Font
+font=CaskaydiaCove Nerd Font 10
+
+# Colors (Tokyonight theme)
+background-color=#1a1b26
+text-color=#c0caf5
+border-color=#7aa2f7
+progress-color=#7dcfff
+
+# Layout
+padding=12
+border-size=2
+border-radius=6
+margin=10
+default-timeout=5000
+max-icon-size=48
+icons=true
+
+# Behavior
+layer=overlay
+anchor=top-right
+width=300
+height=100
+ignore-timeout=false
+
+# Urgency levels
+[urgency=low]
+border-color=#565f89
+
+[urgency=normal]
+border-color=#7aa2f7
+
+[urgency=high]
+border-color=#f7768e
+default-timeout=0
+
+[mode=dnd]
+invisible=true
