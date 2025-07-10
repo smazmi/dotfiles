@@ -6,6 +6,6 @@ show=drun
 prompt=Run:
 allow_markup=true
 insensitive=true
-term=kitty
+term=foot
 no_actions=true
 allow_images=true
