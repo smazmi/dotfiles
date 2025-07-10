@@ -9,9 +9,3 @@ $env.PROMPT_COMMAND_RIGHT = ""
 
 
 $env.TRANSIENT_PROMPT_COMMAND = ""
-
-$env.PROMPT_INDICATOR_VI_INSERT = "╰─" ++ (ansi green) ++ "❯" ++ (ansi reset) ++ " "
-
-$env.PROMPT_INDICATOR_VI_NORMAL = "╰─" ++ (ansi yellow) ++ "❮" ++ (ansi reset) ++ " "
-
-$env.PROMPT_INDICATOR = "╰─" ++ (ansi green) ++ "❯" ++ (ansi reset) ++ " "
