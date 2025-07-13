@@ -8,9 +8,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 
 export ZDOTDIR="$HOME"/.config/zsh
-export NVM_DIR="$HOME/.local/share/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
@@ -25,6 +22,11 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-/usr/share/oh-my-zsh}}/plugins/zsh-completions/src
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+# --- Carapace setup ---
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
 
 _fzf_compgen_path() {
 	fd --hidden --exclude .git . "$1"
@@ -43,7 +45,7 @@ export VISUAL="code"                 # $VISUAL use code
 export SHELL="zsh"                   # $SHELL use zsh
 export PATH="$PATH:$HOME/.local/bin" # Add local bin to path
 export MANPAGER='nvim +Man!'         # Use nvim as manpager
-export TERMINAL="kitty"              # Use kitty as terminal
+export TERMINAL="foot"              # Use kitty as terminal
 
 # ---- History ----
 export HISTFILE="$XDG_CONFIG_HOME"/zsh/.zsh_history
