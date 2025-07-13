@@ -49,6 +49,7 @@ window#waybar.hidden {
 #memory,
 #cpu,
 #custom-dnd,
+/* #bluetooth, */
 #tray {
   padding-left: 16px;
   padding-right: 16px;
