@@ -8,37 +8,33 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # ---- Path to your .profile file ----
 source $HOME/.config/zsh/.profile
 
-source ~/.config/zshrc.d/dots-hyprland.zsh
-
 set -o vi
 
 # ---- Plugins ----{{{
 plugins=(
-  git 
-sudo
-zsh-256color
-zsh-autosuggestions
-zsh-syntax-highlighting
-copybuffer
-copypath
-dirhistory
-web-search
-zsh-autopair
-fzf-tab
-fzf-docker
-)# }}}
-
+    git
+    sudo
+    zsh-256color
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    copybuffer
+    copypath
+    dirhistory
+    web-search
+    zsh-autopair
+    fzf-tab
+    fzf-docker
+) # }}}
 
 # ---- Oh-my-zsh ----
 source $ZSH/oh-my-zsh.sh
 
 # ---- fzf ----
-source /usr/share/fzf/key-bindings.zsh 
-source /usr/share/fzf/completion.zsh 
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # ---- zoxide ----
 eval "$(zoxide init zsh)"
-
 
 # # ---- Command not found handler ----{{{
 # function command_not_found_handler {
@@ -62,24 +58,23 @@ eval "$(zoxide init zsh)"
 # #}}}
 
 # ---- AUR wrapper detection ----{{{
-if pacman -Qi yay &>/dev/null ; then
-   aurhelper="yay"
-elif pacman -Qi paru &>/dev/null ; then
-   aurhelper="paru"
+if pacman -Qi yay &>/dev/null; then
+    aurhelper="yay"
+elif pacman -Qi paru &>/dev/null; then
+    aurhelper="paru"
 fi
 #}}}
 
 # ---- Function to install packages ----{{{
 function in {
     local pkg="$1"
-    if pacman -Si "$pkg" &>/dev/null ; then
+    if pacman -Si "$pkg" &>/dev/null; then
         sudo pacman -S "$pkg"
-    else 
+    else
         "$aurhelper" -S "$pkg"
     fi
 }
 #}}}
-
 
 # ---- Helpful aliases ----
 source $ZDOTDIR/.aliases
