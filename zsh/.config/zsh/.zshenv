@@ -14,6 +14,7 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export PYTHONSTARTUP="$HOME"/python/pythonrc
 export _ZL_DATA="$XDG_DATA_HOME/zlua"
 export ANSIBLE_HOME="$XDG_DATA_HOME"/ansible
+export AZURE_CONFIG_DIR="$XDG_DATA_HOME"/azure
 export GPG_TTY=$(tty)
 export WAKATIME_HOME="$XDG_CONFIG_HOME"/wakatime
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
