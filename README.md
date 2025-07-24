@@ -1,4 +1,5 @@
 # 🏡 Dotfiles Repository
+
 <p align="center">
 <img src="./logo.png" alt="Cute Logo" width="300">
 </p>
@@ -13,31 +14,31 @@ To set up these dotfiles on your system, follow these steps:
 
 1. Ensure GNU Stow is installed on your system:
 
-    ```bash
-    # For Debian-based systems
-    sudo apt-get install stow
+   ```bash
+   # For Debian-based systems
+   sudo apt-get install stow
 
-	# For Arch-based systems
-	sudo pacman -S stow
+   # For Arch-based systems
+   sudo pacman -S stow
 
-    # For Red Hat-based systems
-    sudo yum install stow
+   # For Red Hat-based systems
+   sudo yum install stow
 
-    # For macOS
-    brew install stow
-    ```
+   # For macOS
+   brew install stow
+   ```
 
 2. Clone the repository to your home directory:
 
-    ```bash
-    git clone https://github.com/smazmi/dotfiles.git ~/.dotfiles
-    ```
+   ```bash
+   git clone https://github.com/smazmi/dotfiles.git ~/.dotfiles
+   ```
 
 3. Navigate to the repository:
 
-    ```bash
-    cd ~/.dotfiles
-    ```
+   ```bash
+   cd ~/.dotfiles
+   ```
 
 ## 🚀 Usage
 
@@ -49,6 +50,7 @@ stow lvim
 stow neofetch
 # ... and so on
 ```
+
 or `stow */` can be used to symlink all the configurations at once.
 
 Feel free to mix and match configurations based on your preferences.
@@ -58,28 +60,43 @@ Feel free to mix and match configurations based on your preferences.
 The repository structure is organized as follows:
 
 ```
-.
-├── 📂 bat 
-├── 📂 kitty
-├── 📂 fastfetch
-├── 📂 nvim
-├── 📂 lvim
-├── 📂 neofetch
-├── 📂 tmux
-├── 📂 xremap
-├── 📂 yazi
-├── 📂 zsh
-├── 🖼 logo.png
-├── 📄 README.md
-├── 📄 .gitignore
-└── 📄 .stow-local-ignore
+📂 .
+├── 📁 Kvantum
+├── 📁 bat
+├── 📁 bin
+├── 📁 fastfetch
+├── 📁 fontconfig
+├── 📁 foot
+├── 📁 ghostty
+├── 📁 gtk-2.0
+├── 📁 gtk-3.0
+├── 📁 gtk-4.0
+├── 📁 hypr
+├── 📁 kitty
+├── 📁 lvim
+├── 📁 mako
+├── 📁 neofetch
+├── 📁 nushell
+├── 📁 nvim
+├── 📁 qt5ct
+├── 📁 qt6ct
+├── 📁 sesh
+├── 📁 tmux
+├── 📁 waybar
+├── 📁 wlogout
+├── 📁 wofi
+├── 📁 xremap
+├── 📁 yazi
+├── 📁 zsh
+├── 📓 README.md
+└── 🖼️ logo.png
 ```
 
 Each directory corresponds to a specific tool or application with its respective configuration files.
 
 ## 🚫 Local Stow Ignore
 
-This dotfiles repository utilizes a local stow ignore mechanism with the `.stow-local-ignore` file. It allows customization of the stowing process by excluding specified files or directories locally. 
+This dotfiles repository utilizes a local stow ignore mechanism with the `.stow-local-ignore` file. It allows customization of the stowing process by excluding specified files or directories locally.
 
 ### Purpose
 
@@ -88,7 +105,6 @@ The `.stow-local-ignore` file is designed to skip certain configurations during 
 ### Usage
 
 - Examine the existing `.stow-local-ignore` file for specified patterns.
-  
 - Modify the file to exclude files or directories according to your preferences.
 
 ### Note
@@ -100,6 +116,7 @@ stow -R configuration-name
 ```
 
 By leveraging this local stow ignore feature, you can maintain a clean, organized set of configurations while respecting local nuances.
+
 ## 🛠️ Customization
 
 Feel free to customize these dotfiles to suit your preferences. Modify the configuration files or add your own. To keep things organized, consider creating a separate folder for your custom configurations.
