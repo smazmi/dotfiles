@@ -24,6 +24,7 @@ return {
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.media.image-nvim" },
+  { import = "astrocommunity.programming-language-support.kulala-nvim" },
   { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.cmp-calc" },
