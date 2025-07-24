@@ -1,0 +1,6 @@
+theme = tokyonight_night
+window-padding-x = 25
+window-padding-y = 25
+confirm-close-surface = false
+font-family = "CaskaydiaCove Nerd Font"
+font-size = 11
