@@ -1,0 +1,16 @@
+{
+  "main boilerplate": {
+    "prefix": [
+      "main",
+      "pymain"
+    ],
+    "body": [
+      "def main():",
+      "\t$1",
+      "",
+      "if __name__ == \"__main__\":",
+      "\tmain()$0"
+    ],
+    "description": "Python main() + __name__ guard"
+  }
+}

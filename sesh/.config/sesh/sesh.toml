@@ -1,7 +1,18 @@
 [[session]]
 name = "relayr"
 path = "~/projects/relayr"
-windows = ["code", "ingest", "cli", "consumer", "test", "shell", "notes", "git"]
+windows = [
+  "code",
+  "shell",
+  "api",
+  "ingest",
+  "cli",
+  "consumer",
+  "test",
+  "notes",
+  "git",
+  "db",
+]
 
 [[window]]
 name = "code"
@@ -9,6 +20,12 @@ startup_script = "nvim"
 
 [[window]]
 name = "ingest"
+
+[[window]]
+name = "api"
+
+[[window]]
+name = "db"
 
 [[window]]
 name = "cli"

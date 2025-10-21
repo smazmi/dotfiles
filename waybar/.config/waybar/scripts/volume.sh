@@ -16,11 +16,13 @@ if [[ "$DEVICE" == "o" ]]; then
   SIGNAL=10
   ICON_MUTED="󰖁"
   TYPE="speaker"
+  NOTIFY_TAG="volume-output"
 elif [[ "$DEVICE" == "i" ]]; then
   TARGET="--default-source"
   SIGNAL=11
   ICON_MUTED="󰍭"
   TYPE="mic"
+  NOTIFY_TAG="volume-input"
 else
   echo '{"text": "Invalid", "class": "error"}'
   exit 1
@@ -38,8 +40,14 @@ m) pamixer $TARGET --toggle-mute ;;
   ;;
 esac
 
-# Determine volume/mute state
+# Determine volume/mute state and send notification if action triggered
 if pamixer $TARGET --get-mute | grep -q true; then
+  # Muted
+  if [[ -n "$ACTION" && "$ACTION" != "get" ]]; then
+    notify-send -h string:x-canonical-private-synchronous:$NOTIFY_TAG \
+      -u low \
+      "$TYPE Muted"
+  fi
   echo "{\"text\": \"$ICON_MUTED\", \"class\": \"muted\"}"
 else
   VOL=$(pamixer $TARGET --get-volume)
@@ -56,6 +64,13 @@ else
     fi
   else
     ICON=""
+  fi
+
+  if [[ -n "$ACTION" && "$ACTION" != "get" ]]; then
+    notify-send -h string:x-canonical-private-synchronous:$NOTIFY_TAG \
+      -u low \
+      -h int:value:"$VOL" \
+      "$TYPE Volume" "${VOL}%"
   fi
 
   echo "{\"text\": \"$ICON $VOL%\", \"tooltip\": \"$TYPE volume\", \"class\": \"active\"}"

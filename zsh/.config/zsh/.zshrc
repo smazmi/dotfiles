@@ -88,6 +88,9 @@ bindkey '^n' history-search-forward
 # ---- To customize prompt, run `p10k configure` or edit ~/.p10k.zsh. ----
 [[ ! -f ${ZDOTDIR:-~}/.p10k.zsh ]] || source ${ZDOTDIR:-~}/.p10k.zsh
 
+[ -s "/usr/share/nvm/nvm.sh" ] && \. "/usr/share/nvm/nvm.sh"
+[ -s "/usr/share/nvm/bash_completion" ] && \. "/usr/share/nvm/bash_completion"
+
 # ---- Display Pokemon ----
 # pokemon-colorscripts --no-title -r 1,3,6
 krabby random --no-title 1,3,6
