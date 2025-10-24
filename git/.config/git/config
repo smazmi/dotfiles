@@ -1,0 +1,16 @@
+[user]
+	email = sadiquemobaraka5@gmail.com
+	name = Sadique Azmi
+	signingkey = sadiquemobaraka5@gmail.com
+
+[commit]
+	gpgsign = true
+
+[core]
+	editor = nvim
+
+[diff]
+	tool = nvimdiff
+
+[log]
+	abbrevCommit = true
