@@ -68,6 +68,7 @@ The repository structure is organized as follows:
 ├── 📁 fontconfig
 ├── 📁 foot
 ├── 📁 ghostty
+├── 📁 git
 ├── 📁 gtk-2.0
 ├── 📁 gtk-3.0
 ├── 📁 gtk-4.0
@@ -81,12 +82,14 @@ The repository structure is organized as follows:
 ├── 📁 qt5ct
 ├── 📁 qt6ct
 ├── 📁 sesh
+├── 📁 snippets
 ├── 📁 tmux
 ├── 📁 waybar
 ├── 📁 wlogout
 ├── 📁 wofi
 ├── 📁 xremap
 ├── 📁 yazi
+├── 📁 zed
 ├── 📁 zsh
 ├── 📓 README.md
 └── 🖼️ logo.png
