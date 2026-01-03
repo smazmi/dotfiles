@@ -1,4 +1,9 @@
 return {
   "sphamba/smear-cursor.nvim",
-  opts = {},
+  opts = {
+    legacy_computing_symbols_support = true,
+    stiffness = 0.5,
+    trailing_stiffness = 0.5,
+    matrix_pixel_threshold = 0.5,
+  },
 }
