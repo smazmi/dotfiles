@@ -66,7 +66,7 @@ alias lf="yazi" #yazi file manager
 alias wgup="sudo wg-quick up" # start wireguard
 alias wgdown="sudo wg-quick down" # stop wireguard
 alias neofetch="clear && fastfetch" # fastfetch
-alias h="hyprland" # hyprland
+alias h="start-hyprland" # hyprland
 alias t="tmux" # tmux
 alias zed="zeditor ." # zed editor
 #}}}
