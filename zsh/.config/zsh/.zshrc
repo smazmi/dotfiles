@@ -85,6 +85,15 @@ bindkey '^e' end-of-line
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
+autoload -Uz edit-command-line
+
+function _nvim_edit_cmdline() {
+    VISUAL=nvim EDITOR=nvim zle edit-command-line
+}
+
+zle -N _nvim_edit_cmdline
+bindkey '^x^e' _nvim_edit_cmdline
+
 # ---- To customize prompt, run `p10k configure` or edit ~/.p10k.zsh. ----
 [[ ! -f ${ZDOTDIR:-~}/.p10k.zsh ]] || source ${ZDOTDIR:-~}/.p10k.zsh
 

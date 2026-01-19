@@ -26,7 +26,7 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 # --- Carapace setup ---
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
-source <(carapace _carapace)
+source <(carapace _carapace zsh)
 
 _fzf_compgen_path() {
 	fd --hidden --exclude .git . "$1"
@@ -45,7 +45,8 @@ export VISUAL="code"                 # $VISUAL use code
 export SHELL="zsh"                   # $SHELL use zsh
 export PATH="$PATH:$HOME/.local/bin" # Add local bin to path
 export MANPAGER='nvim +Man!'         # Use nvim as manpager
-export TERMINAL="foot"              # Use kitty as terminal
+export TERMINAL="ghostty"            # Use ghostty as terminal
+export SUDO_PROMPT=$'\a[sudo] password for %p: '
 
 # ---- History ----
 export HISTFILE="$XDG_CONFIG_HOME"/zsh/.zsh_history
