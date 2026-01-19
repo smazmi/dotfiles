@@ -1,5 +1,4 @@
 @import "colors.css";
-
 * {
   border: none;
   border-radius: 0;
@@ -14,31 +13,28 @@ window#waybar.hidden {
   opacity: 0.2;
 }
 
-/* Workspace block */
-
 #workspaces {
   border-radius: 6px;
   margin-right: 8px;
-  background-color: @surface_container_high;
+  margin-top: 0px;
+  background-color: #3b4261;
 }
 
 #workspaces button {
   background: transparent;
   padding: 5px;
   font-size: 18px;
-  color: @on_surface_variant;
+  color: #c0caf5;
 }
 
 #workspaces button:hover {
-  background: @surface_container_highest;
+  background: #3b4261;
   border-radius: 4px;
 }
 
 #workspaces button.active {
-  color: @primary;
+  color: #7aa2f7;
 }
-
-/* Main modules */
 
 #window,
 #keyboard-state,
@@ -54,39 +50,37 @@ window#waybar.hidden {
 #memory,
 #cpu,
 #custom-dnd,
+/* #bluetooth, */
 #tray {
   padding-left: 16px;
   padding-right: 16px;
   margin-right: 8px;
   border-radius: 6px;
-  color: @on_surface;
-  background: @surface_container;
+  transition: none;
+  color: #c0caf5;
+  background: #1a1b26;
 }
-
-/* Audio muted */
 
 #pulseaudio.muted,
 #custom-volume-output.muted,
 #custom-volume-input.muted {
-  background-color: @secondary_container;
-  color: @on_secondary_container;
+  background-color: #9ece6a;
+  color: #1a1b26;
 }
 
-/* Battery states */
-
 #battery.charging {
-  background-color: @secondary_fixed_dim;
-  color: @on_secondary_fixed;
+  color: #1a1b26;
+  background-color: #9ece6a;
 }
 
 #battery.warning:not(.charging) {
-  background-color: @tertiary_fixed_dim;
-  color: @on_tertiary_fixed;
+  background-color: #e0af68;
+  color: #1a1b26;
 }
 
 #battery.critical:not(.charging) {
-  background-color: @error;
-  color: @on_error;
+  background-color: #f7768e;
+  color: #ffffff;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -96,7 +90,7 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    background-color: @on_error;
-    color: @error;
+    background-color: #ffffff;
+    color: #000000;
   }
 }
