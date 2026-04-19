@@ -1,3 +1,9 @@
 return {
-  "norcalli/nvim-colorizer.lua",
+  "catppuccin/nvim",
+  name = "catppuccin",
+  opts = {
+    flavour = "mocha",
+    transparent_background = true,
+    -- configuration options...
+  },
 }

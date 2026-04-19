@@ -1,4 +1,4 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize Mason
 
@@ -18,6 +18,7 @@ return {
         "stylua",
 
         -- install debuggers
+        "debugpy",
 
         -- install any other package
         "tree-sitter-cli",
