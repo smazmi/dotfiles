@@ -67,3 +67,7 @@ output_path = "~/.config/Kvantum/Kvantum-Matugen/Kvantum-Matugen.kvconfig"
 [templates.vscode]
 input_path = "~/.config/matugen/templates/vscode.json"
 output_path = "~/.config/Code/User/matugen-colors.json"
+
+[templates.zed]
+input_path = '~/.config/matugen/templates/zed-colors.json'
+output_path = '~/.config/zed/themes/matugen.json'
