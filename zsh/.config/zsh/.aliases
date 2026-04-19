@@ -69,4 +69,5 @@ alias neofetch="clear && fastfetch" # fastfetch
 alias h="start-hyprland" # hyprland
 alias t="tmux" # tmux
 alias zed="zeditor ." # zed editor
+alias datagrip="/opt/datagrip/bin/datagrip.sh"
 #}}}

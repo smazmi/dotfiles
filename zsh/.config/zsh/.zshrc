@@ -103,3 +103,5 @@ bindkey '^x^e' _nvim_edit_cmdline
 # ---- Display Pokemon ----
 # pokemon-colorscripts --no-title -r 1,3,6
 krabby random --no-title 1,3,6
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
