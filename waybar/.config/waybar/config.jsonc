@@ -32,6 +32,7 @@
     ],
     "modules-right": [
         // "pulseaudio",
+        "custom/tomat",
         "custom/volume-output",
         "custom/volume-input",
         "backlight",
@@ -99,6 +100,15 @@
         "on-scroll-down": "~/.config/waybar/scripts/volume.sh o d",
         "signal": 10,
         "return-type": "json"
+    },
+    "custom/tomat": {
+        "exec": "tomat status",
+        "interval": 1,
+        "return-type": "json",
+        "format": "{text}",
+        "tooltip": true,
+        "on-click": "tomat toggle",
+        "on-click-right": "tomat skip"
     },
     "custom/volume-input": {
         "format": "{}",

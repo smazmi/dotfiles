@@ -54,6 +54,7 @@ window#waybar.hidden {
 #memory,
 #cpu,
 #custom-dnd,
+#custom-tomat,
 #tray {
   padding-left: 16px;
   padding-right: 16px;
@@ -92,6 +93,26 @@ window#waybar.hidden {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+/* #custom-tomat.work { */
+/*   background-color: @primary; */
+/*   color: @on_primary; */
+/* } */
+/**/
+/* #custom-tomat.work-paused { */
+/*   background-color: @secondary_container; */
+/*   color: @on_secondary_container; */
+/* } */
+
+#custom-tomat.work {
+  background-color: @primary_container;
+  color: @on_primary_container;
+}
+
+#custom-tomat.work-paused {
+  background-color: @surface_container_high;
+  color: @on_surface;
 }
 
 @keyframes blink {
