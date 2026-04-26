@@ -1,0 +1,25 @@
+[timer]
+work = 25.0       # Work duration in minutes
+break = 5.0       # Break duration in minutes
+long_break = 15.0 # Long break duration in minutes
+sessions = 4      # Sessions until long break
+
+[sound]
+enabled = true # Enable sound notifications
+volume = 0.5   # Volume level (0.0-1.0)
+
+[notification]
+enabled = true # Enable desktop notifications
+icon = "auto"  # Icon mode: "auto", "theme", or custom path
+timeout = 4000 # Notification timeout in milliseconds
+
+[display]
+text_format = "{icon} {time} {state}" # Text display format
+
+[display.icons]
+work = "󰄉"
+break = "󰥔"
+long_break = "󱁏"
+play = ""
+pause = ""
+stop = ""
