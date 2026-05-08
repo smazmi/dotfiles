@@ -8,6 +8,7 @@
 
 [core]
 	editor = nvim
+	pager = delta
 
 [diff]
 	tool = nvimdiff
@@ -31,3 +32,14 @@
 
 [init]
 	defaultBranch = main
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true  
+  dark = true
+	side-by-side = true
+
+[merge]
+	conflictStyle = zdiff3
