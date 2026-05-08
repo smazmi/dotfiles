@@ -8,10 +8,15 @@
 
 [core]
 	editor = nvim
-	pager = delta
 
-[diff]
-	tool = nvimdiff
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+
+[include]
+  path = ~/.config/git/delta.gitconfig
 
 [log]
 	abbrevCommit = true
@@ -40,6 +45,8 @@
 	navigate = true  
   dark = true
 	side-by-side = true
+	features = catppuccin-mocha
+	line-numbers = true
 
 [merge]
 	conflictStyle = zdiff3
