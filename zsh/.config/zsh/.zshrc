@@ -105,3 +105,8 @@ bindkey '^x^e' _nvim_edit_cmdline
 krabby random --no-title 1,3,6
 
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+
+# bun completions
+[ -s "/home/arno/.local/share/bun/_bun" ] && source "/home/arno/.local/share/bun/_bun"
+
+eval "$(atuin init zsh)"
