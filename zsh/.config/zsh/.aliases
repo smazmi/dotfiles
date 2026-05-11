@@ -60,7 +60,7 @@ alias task='go-task'
 # ---- Apps ----{{{
 alias vim="nvim" # neovim
 alias vi="nvim" # neovim
-alias open="nautilus ./" # open file manager
+alias open="nohup nautilus . >/dev/null 2>&1 &" # open file manager
 alias tb="nc termbin.com 9999" # pastebin
 alias lf="yazi" #yazi file manager
 alias wgup="sudo wg-quick up" # start wireguard
